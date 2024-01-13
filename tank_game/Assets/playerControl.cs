@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerControl : MonoBehaviour
 {
-    public firing firing;
+    //public firing firing;
     public int firingNumber;
     double time;
     double distance;
@@ -17,9 +17,9 @@ public class playerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        firingNumber=firing.fired;
-        time=firing.time;
-        distance=firing.distance;
+        //firingNumber=firing.fired;
+        // time=firing.time;
+        // distance=firing.distance;
         if(firingNumber%2==0)
         {
             
