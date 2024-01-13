@@ -7,6 +7,9 @@ public class aim : MonoBehaviour
     Rigidbody2D muzrb;
     float angVel=0f;
     // Start is called before the first frame update
+         public playerControl pc;
+
+    public tank_properties tp;
     void Start()
     {
         muzrb=GetComponent<Rigidbody2D>();
@@ -15,6 +18,11 @@ public class aim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pc.current_Tank!=tp.tank_number)
+        {
+            return;
+        }
+
         muzrb.angularVelocity = angVel;
         if(Input.GetKeyDown(KeyCode.W))
         {

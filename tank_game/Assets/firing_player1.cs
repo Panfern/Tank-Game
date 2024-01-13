@@ -21,7 +21,7 @@ public class firing_player1 : MonoBehaviour
         distance=0.0;
         projectile=GetComponent<Rigidbody2D>();
        // magnitude=Vector2(10,10);
-        x=45f;
+        x=0f;
         y=45f;
         fired=0;
         n=pc.firingNumber;
@@ -31,7 +31,7 @@ public class firing_player1 : MonoBehaviour
     void Update()
 {
    
-    if(n%2==0)
+    if(pc.firingNumber%2==0)
     {
     time=2*(y/9.81);
     distance=x*time;
