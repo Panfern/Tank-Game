@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tank_number: 0
+  zAxis: 0
 --- !u!114 &253280361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tank_number: 1
+  zAxis: 0
 --- !u!1 &399770097
 GameObject:
   m_ObjectHideFlags: 0
@@ -5710,10 +5712,9 @@ MonoBehaviour:
   y: 0
   flag: 0
   fired: 0
-  time: 0
-  distance: 0
   pc: {fileID: 80056639}
   n: 0
+  tp: {fileID: 253280360}
 --- !u!1 &665928588
 GameObject:
   m_ObjectHideFlags: 0
@@ -5921,14 +5922,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846494213}
-  m_LocalRotation: {x: 0, y: 0, z: -0.37549645, w: 0.92682385}
-  m_LocalPosition: {x: -6.5611997, y: 1.3763, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -6.61, y: 1.26, z: 0}
   m_LocalScale: {x: 0.24838944, y: 1.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 253280358}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -44.11}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!255 &846494215
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -5944,7 +5945,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: -0.55}
-  m_ConnectedAnchor: {x: 0.28490973, y: 0.3128497}
+  m_ConnectedAnchor: {x: -0.0057982206, y: 0.28889364}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!50 &846494216
@@ -11433,14 +11434,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595546881}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4012, y: 0.48180002, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: -7.38, y: 0.48180002, z: 0}
   m_LocalScale: {x: 1, y: 1.0289, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 253280358}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
 --- !u!50 &1595546883
 Rigidbody2D:
   serializedVersion: 4

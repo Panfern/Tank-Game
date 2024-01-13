@@ -1,43 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class firing_player1 : MonoBehaviour
 {
     Rigidbody2D projectile;
    // Vector2 magnitude;
     public float x;
     public float y;
+    float velocity;
     public bool flag;
     public int fired;
-    public double time;
-    public double distance;
     public playerControl pc;
     public int n;
+    public tank_properties tp;
+    double currentAngle;
     // Start is called before the first frame update
     void Start()
     {
-        time=0.0;
-        distance=0.0;
         projectile=GetComponent<Rigidbody2D>();
-       // magnitude=Vector2(10,10);
-        x=0f;
-        y=45f;
+        velocity=100;
+        x=0;
+        y=0;
         fired=0;
-        n=pc.firingNumber;
+        currentAngle=0;
     }
 
     // Update is called once per frame
     void Update()
 {
    
+   if(pc.current_Tank!=tp.tank_number)
+        {
+            return;
+        }
+    currentAngle=tp.zAxis>180?(360-tp.zAxis):(-1)*tp.zAxis;
+    
+    x=(float)(velocity*Math.Sin(currentAngle*Math.PI/180));
+    y=(float)(velocity*Math.Cos(currentAngle*Math.PI/180));
+    
     if(pc.firingNumber%2==0)
     {
-    time=2*(y/9.81);
-    distance=x*time;
     Vector2 force = new Vector2(x, y);
     if(Input.GetKey(KeyCode.Mouse0) && !flag)
     {
+        Debug.Log(x);
+        Debug.Log(y);
+        Debug.Log(force);
+        Debug.Log(currentAngle);
+       
         projectile.AddForce(force,ForceMode2D.Impulse);
         pc.firingNumber++;
         flag=true;

@@ -6,6 +6,7 @@ public class tank_properties : MonoBehaviour
 {
     // Start is called before the first frame update
     public int tank_number;
+    public double zAxis;
     void Start()
     {
     }

@@ -18,11 +18,11 @@ public class aim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        tp.zAxis = transform.localEulerAngles.z;
         if(pc.current_Tank!=tp.tank_number)
         {
             return;
         }
-
         muzrb.angularVelocity = angVel;
         if(Input.GetKeyDown(KeyCode.W))
         {
@@ -40,6 +40,5 @@ public class aim : MonoBehaviour
         {
             angVel=0f;
         }
-
     }
 }
